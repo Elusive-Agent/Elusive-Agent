@@ -359,8 +359,55 @@ h1, h2, .section-title {
 
 /* Add responsive padding for smaller screens */
 @media (max-width: 768px) {
-    .about-section {
-        padding-top: 80px; /* More space for navbar on mobile */
+    /* Global mobile styles */
+    body {
+        padding-top: 80px;
+    }
+
+    main {
+        flex: 1;
+        padding-bottom: 60px;
+    }
+
+    /* Section spacing for mobile */
+    .about-section,
+    .skills-section,
+    .projects-section,
+    .contact-section {
+        padding-top: 80px;  /* Consistent padding for all sections */
+        min-height: calc(100vh - 120px);
+    }
+
+    /* Terminal specific mobile styles */
+    .terminal-window {
+        transform: scale(0.25);
+        transform-origin: top center;
+        width: 400% !important;
+        margin: -150px auto;
+    }
+
+    .terminal-text {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: pre;
+    }
+
+    .ascii-art {
+        font-size: 0.85rem;  /* Base size for tablets */
+        white-space: pre;
+        display: inline-block;
+    }
+
+    /* Window content mobile adjustments */
+    .window-content {
+        padding: 10px;
+    }
+}
+
+/* Additional breakpoint for smaller devices */
+@media (max-width: 480px) {
+    .ascii-art {
+        font-size: calc(0.55vw + 2px);  /* Responsive font size for phones */
     }
 }
 
@@ -649,19 +696,6 @@ a, button {
     text-align: left;
 }
 
-/* Media queries for better control */
-@media (max-width: 768px) {
-    .ascii-art {
-        font-size: calc(0.45vw + 2px);  /* Slightly larger on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .ascii-art {
-        font-size: calc(0.55vw + 2px);  /* Even larger on mobile */
-    }
-}
-
 /* Make container full width */
 .container {
     max-width: 1800px !important;  /* Much wider */
@@ -936,45 +970,4 @@ main {
 .hero {
     min-height: calc(100vh - 120px);
     padding: 20px 0 80px 0;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    body {
-        padding-top: 80px; /* More space for navbar on mobile */
-    }
-    
-    .terminal-text {
-        overflow-x: auto; /* Allow horizontal scroll for terminal */
-    }
-    
-    .ascii-art {
-        font-size: 0.6rem; /* Smaller font for terminal art */
-    }
-}
-
-/* Terminal responsive styles */
-@media (max-width: 768px) {
-    .terminal-window {
-        transform: scale(0.25);     /* Scale down to 25% */
-        transform-origin: top center;
-        width: 400% !important;     /* Compensate more for smaller scale */
-        margin: -150px auto;        /* Adjust spacing for smaller scale */
-    }
-
-    .terminal-text {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        white-space: pre;
-    }
-
-    .ascii-art {
-        font-size: 0.85rem;
-        white-space: pre;
-        display: inline-block;
-    }
-
-    .window-content {
-        padding: 10px;
-    }
 }
