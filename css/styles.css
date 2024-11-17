@@ -952,3 +952,24 @@ main {
         font-size: 0.6rem; /* Smaller font for terminal art */
     }
 }
+
+/* Terminal responsive styles */
+@media (max-width: 768px) {
+    .terminal-text {
+        overflow-x: auto;  /* Allow horizontal scrolling if needed */
+        -webkit-overflow-scrolling: touch;  /* Smooth scrolling on iOS */
+        transform-origin: top left;
+        transform: scale(0.5);  /* Scale down to 50% on mobile */
+    }
+
+    .ascii-art {
+        font-size: 0.85rem;  /* Keep original size before scaling */
+        white-space: pre;    /* Preserve ASCII art formatting */
+    }
+
+    .terminal-window {
+        overflow: hidden;    /* Hide overflow from scaled content */
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
