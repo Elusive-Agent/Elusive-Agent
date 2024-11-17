@@ -955,21 +955,29 @@ main {
 
 /* Terminal responsive styles */
 @media (max-width: 768px) {
+    .terminal-window {
+        width: auto !important;     /* Adapt to content */
+        max-width: 100% !important; /* Don't overflow screen */
+        margin: 20px auto;
+        overflow: hidden;
+    }
+
     .terminal-text {
-        overflow-x: auto;  /* Allow horizontal scrolling if needed */
-        -webkit-overflow-scrolling: touch;  /* Smooth scrolling on iOS */
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
         transform-origin: top left;
-        transform: scale(0.5);  /* Scale down to 50% on mobile */
+        transform: scale(0.35);     /* Scale down to 35% on mobile */
+        margin-right: -180%;        /* Compensate for scale to prevent overflow */
+        margin-bottom: -180%;       /* Compensate for scale to prevent overflow */
     }
 
     .ascii-art {
-        font-size: 0.85rem;  /* Keep original size before scaling */
-        white-space: pre;    /* Preserve ASCII art formatting */
+        font-size: 0.85rem;
+        white-space: pre;
+        display: inline-block;      /* Contain the scaled content */
     }
 
-    .terminal-window {
-        overflow: hidden;    /* Hide overflow from scaled content */
-        width: 100% !important;
-        max-width: 100% !important;
+    .window-content {
+        padding: 10px;              /* Reduce padding on mobile */
     }
 }
