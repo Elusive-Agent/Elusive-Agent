@@ -24,6 +24,7 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
+    padding-top: 60px; /* Adjust based on your navbar height */
 }
 
 .navbar {
@@ -915,4 +916,42 @@ main {
 
 .skill-item .d-flex h5 {
     color: var(--win95-black);
+}
+
+/* Global layout fixes */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px; /* Adjust based on your navbar height */
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    padding-bottom: 60px; /* Space for footer */
+}
+
+/* Section spacing */
+.skills-section,
+.projects-section,
+.contact-section,
+.hero {
+    min-height: calc(100vh - 120px);
+    padding: 20px 0 80px 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    body {
+        padding-top: 80px; /* More space for navbar on mobile */
+    }
+    
+    .terminal-text {
+        overflow-x: auto; /* Allow horizontal scroll for terminal */
+    }
+    
+    .ascii-art {
+        font-size: 0.6rem; /* Smaller font for terminal art */
+    }
 }
