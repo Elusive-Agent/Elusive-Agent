@@ -382,7 +382,6 @@ h1, h2, .section-title {
     .terminal-window {
         transform: scale(0.25);
         transform-origin: top center;
-        width: 400% !important;
         margin: -150px auto;
     }
 
