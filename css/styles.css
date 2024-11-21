@@ -117,12 +117,13 @@ h1, h2, .section-title, .card-title {
     margin: 20px auto;
     max-width: 800px;
     width: 90%;
-    animation: bootWindow 0.5s ease forwards;
-    transition: transform 0.2s ease;
+    animation: bootWindow 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .win95-window:hover {
-    transform: translateY(-2px);
+    transform: scale(1.02);
+    opacity: 0.95;
 }
 
 .window-title-bar {
@@ -153,7 +154,11 @@ h1, h2, .section-title, .card-title {
 @keyframes bootWindow {
     0% {
         opacity: 0;
-        transform: scale(1.1) translateY(-10px);
+        transform: scale(0.9) translateY(-20px);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.05) translateY(10px);
     }
     100% {
         opacity: 1;
@@ -235,4 +240,25 @@ main {
     .terminal-window {
         width: 100%;
     }
+}
+
+/* Smooth transition for links and buttons */
+.nav-link, .navbar-brand, .win95-button {
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-link:hover, .navbar-brand:hover, .win95-button:hover {
+    background-color: var(--win95-white);
+    color: var(--win95-black);
+    box-shadow: inset 1px 1px var(--win95-darker), inset -1px -1px var(--win95-white);
+}
+
+/* Smooth transition for window content */
+.win95-window {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.win95-window:hover {
+    transform: scale(1.02);
+    opacity: 0.95;
 }
