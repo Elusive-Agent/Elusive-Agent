@@ -1,462 +1,49 @@
-/* Windows 95 inspired colors */
+/* Root Variables - Windows 95 Inspired */
 :root {
-    --win95-bg: #c0c0c0;         /* Classic gray background */
-    --win95-dark: #808080;       /* Darker gray for borders */
-    --win95-darker: #404040;     /* Even darker gray */
-    --win95-blue: #2f3f60;       /* Changed from #000080 to a more muted blue */
-    --win95-white: #ffffff;      /* White */
-    --win95-black: #000000;      /* Black for text */
-    --win95-highlight: #3d5a80;  /* Changed highlight color to match */
+    --win95-bg: #c0c0c0;
+    --win95-dark: #808080;
+    --win95-darker: #404040;
+    --win95-blue: #2f3f60;
+    --win95-white: #ffffff;
+    --win95-black: #000000;
+    --win95-highlight: #3d5a80;
 }
 
-/* Add Monocraft font */
+/* Font Import and Global Settings */
 @font-face {
     font-family: 'Monocraft';
     src: url('../fonts/Monocraft.ttc');
 }
 
-/* Update body to use Monocraft */
-body {
-    font-family: 'Monocraft';
-    background-color: #218c74;  /* Forest Green */
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    padding-top: 60px; /* Adjust based on your navbar height */
-}
-
-.navbar {
-    background-color: var(--win95-bg) !important;
-    border-bottom: 2px solid var(--win95-dark);
-    padding: 0.5rem 0;
-}
-
-.navbar-brand, .nav-link {
-    color: var(--win95-black) !important;
-}
-
-.nav-link:hover {
-    color: var(--win95-blue) !important;
-    background-color: var(--win95-white);
-}
-
-h1, .section-title {
-    color: var(--win95-blue);
-}
-
-.lead {
-    color: var(--win95-darker);
-}
-
-.footer {
-    background-color: var(--win95-bg);
-    border-top: 2px solid var(--win95-dark);
-    color: var(--win95-black);
-}
-
-/* Update other elements */
-.btn-outline-primary {
-    color: var(--win95-blue);
-    border-color: var(--win95-blue);
-    background: var(--win95-bg);
-}
-
-.btn-outline-primary:hover {
-    color: var(--win95-white);
-    background-color: var(--win95-blue);
-    border-color: var(--win95-blue);
-}
-
-.skills-card, .contact-box, .coming-soon-box {
-    background-color: var(--win95-bg);
-    border: 2px solid var(--win95-dark);
-    box-shadow: inset 1px 1px var(--win95-white), inset -1px -1px var(--win95-darker);
-}
-
-.progress {
-    background-color: var(--win95-white);
-    border: 1px solid var(--win95-dark);
-}
-
-.progress-bar {
-    background-color: var(--win95-blue);
-}
-
-.form-control {
-    background-color: var(--win95-white) !important;
-    border: 1px solid var(--win95-dark) !important;
-    color: var(--win95-black) !important;
-}
-
-.form-control:focus {
-    box-shadow: 0 0 0 0.2rem rgba(0, 0, 128, 0.25);
-    border-color: var(--win95-blue) !important;
-}
-
-.about-image img {
-    border: 2px solid var(--win95-blue);
-    max-width: 100%;
-    height: auto;
-}
-
-.about-section {
-    min-height: calc(100vh - 200px);
-}
-
-.skills-card {
-    border: 2px solid var(--win95-blue);
-    padding: 2rem;
-    margin-bottom: 2rem;
-}
-
-.card-title {
-    color: var(--win95-blue);
-    margin-bottom: 2rem;
-}
-
-.skill-item h5 {
-    color: var(--win95-white);
-    margin-bottom: 0.5rem;
-}
-
-.skill-item span {
-    color: var(--win95-highlight);
-}
-
-.progress {
-    height: 10px;
-    background-color: var(--win95-white);
-    border: 1px solid var(--win95-dark);
-}
-
-.progress-bar {
-    background-color: var(--win95-blue);
-}
-
-.skills-section {
-    min-height: calc(100vh - 200px);
-}
-
-.projects-section {
-    min-height: calc(100vh - 200px);
-}
-
-.coming-soon-container {
-    padding: 4rem 0;
-}
-
-.coming-soon-box {
-    border: 2px solid var(--win95-blue);
-    padding: 3rem;
-    margin: 2rem auto;
-    max-width: 600px;
-}
-
-.coming-soon-icon {
-    color: var(--win95-blue);
-    font-size: 4rem;
-}
-
-.coming-soon-text {
-    color: var(--win95-highlight);
-    font-size: 2.5rem;
-    margin: 1rem 0;
-    letter-spacing: 4px;
-}
-
-.contact-section {
-    min-height: calc(100vh - 200px);
-}
-
-.contact-box {
-    border: 2px solid var(--win95-blue);
-    padding: 2rem;
-}
-
-.contact-info {
-    text-align: center;
-}
-
-.info-item {
-    margin-bottom: 2rem;
-}
-
-.info-item i {
-    color: var(--win95-blue);
-    font-size: 2rem;
-}
-
-.info-item h5 {
-    color: var(--win95-highlight);
-    margin: 1rem 0;
-}
-
-.contact-form .form-control {
-    background-color: var(--win95-white);
-    border: 1px solid var(--win95-dark);
-    color: var(--win95-black);
-    padding: 0.8rem;
-}
-
-.contact-form .form-control:focus {
-    box-shadow: 0 0 0 0.2rem rgba(0, 0, 128, 0.25);
-    border-color: var(--win95-blue);
-}
-
-.contact-form .form-control::placeholder {
-    color: rgba(0, 0, 0, 0.5);
-}
-
-/* Add/modify these styles */
-
-/* Make sure body takes full height */
 html, body {
     height: 100%;
     margin: 0;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden;
+    font-family: 'Monocraft';
+    background-color: #205355; /* Updated teal color */
+    background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.03) 0px, rgba(255, 255, 255, 0.03) 2px, transparent 2px, transparent 4px);
+    display: flex;
+    flex-direction: column;
 }
 
 body {
     min-height: 100vh;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    position: relative;
 }
 
-/* Main content should grow to push footer down */
-.hero {
-    flex: 1;
-    min-height: calc(100vh - 160px); /* Adjust based on your navbar and footer height */
-    display: flex;
-    align-items: center;
-}
-
-/* Footer stays at bottom */
-.footer {
-    width: 100%;
-    padding: 1rem 0;
-    margin-top: auto;
-}
-
-.navbar-brand {
-    background-color: var(--win95-bg);
-    border: 2px solid var(--win95-dark);
-    box-shadow: inset 1px 1px var(--win95-white), inset -1px -1px var(--win95-darker);
-    padding: 0.5rem 1rem;
-    margin: 0.5rem;
-    font-size: 1.8rem;
-    font-weight: bold;
-}
-
-.navbar-brand:hover {
-    background-color: var(--win95-white);
-}
-
-.navbar-brand i {
-    font-size: 1.8rem;
-    margin-right: 0.5rem;
-}
-
-/* Update contact styles */
-.contact-link {
-    color: var(--win95-blue);
-    text-decoration: none;
-    font-size: 1.3rem;
-}
-
-.contact-link:hover {
-    color: var(--win95-highlight);
-    text-decoration: underline;
-}
-
-.info-item i {
-    font-size: 2.5rem;
+/* Typography and Element Defaults */
+h1, h2, .section-title, .card-title {
+    font-family: 'Monocraft';
     color: var(--win95-blue);
 }
 
-.info-item h5 {
+.lead, .info-item h5 {
     color: var(--win95-darker);
-    margin: 1rem 0;
 }
 
-/* You might want to adjust font sizes since custom fonts can render differently */
-.navbar-brand {
-    font-family: 'Monocraft';
-    font-size: 1.4rem;  /* Adjust if needed */
-}
-
-h1, h2, .section-title {
-    font-family: 'Monocraft';
-    font-size: 2.5rem;  /* Adjust if needed */
-}
-
-.lead {
-    font-family: 'Monocraft';
-    font-size: 1.5rem;  /* Adjust if needed */
-}
-
-.about-image {
-    max-width: 400px;  /* Reduced from 600px */
-    margin: 0 auto;
-}
-
-.about-image img {
-    border: 2px solid var(--win95-dark);
-    box-shadow: inset 1px 1px var(--win95-white), inset -1px -1px var(--win95-darker);
-}
-
-.about-content {
-    text-align: center;  /* Center all text */
-    padding: 20px;
-    margin-bottom: 40px;  /* Additional space at bottom */
-}
-
-.about-content h3 {
-    color: var(--win95-blue);
-    margin-top: 25px;
-    margin-bottom: 15px;
-    font-size: 1.4rem;
-}
-
-.about-content ul {
-    list-style: none;  /* Remove default list styling */
-    padding: 0;        /* Remove default padding */
-    margin: 0;         /* Remove default margin */
-}
-
-.about-content li {
-    margin-bottom: 8px;
-}
-
-.about-content p {
-    margin-bottom: 20px;
-    line-height: 1.6;
-    max-width: 800px;  /* Optional: limit line length for better readability */
-    margin-left: auto; /* Center the paragraph block */
-    margin-right: auto;
-}
-
-/* Make sure content is scrollable */
-.about-section {
-    flex: 1;
-    padding-bottom: 60px; /* Add space for footer */
-    overflow-y: auto; /* Enable vertical scrolling */
-}
-
-/* Keep footer at bottom without overlapping content */
-.footer {
-    width: 100%;
-    padding: 1rem 0;
-    margin-top: auto;
-}
-
-/* Adjust navbar */
-.navbar {
-    z-index: 1000; /* Ensure navbar stays on top */
-}
-
-/* Add responsive padding for smaller screens */
-@media (max-width: 768px) {
-    /* Global mobile styles */
-    body {
-        padding-top: 80px;
-    }
-
-    main {
-        flex: 1;
-        padding-bottom: 60px;
-    }
-
-    /* Section spacing for mobile */
-    .about-section,
-    .skills-section,
-    .projects-section,
-    .contact-section {
-        padding-top: 80px;  /* Consistent padding for all sections */
-        min-height: calc(100vh - 120px);
-    }
-
-    /* Terminal specific mobile styles */
-    .terminal-window {
-        transform: scale(0.25);
-        transform-origin: top center;
-        margin: -150px auto;
-    }
-
-    .terminal-text {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        white-space: pre;
-    }
-
-    .ascii-art {
-        font-size: 0.85rem;  /* Base size for tablets */
-        white-space: pre;
-        display: inline-block;
-    }
-
-    /* Window content mobile adjustments */
-    .window-content {
-        padding: 10px;
-    }
-}
-
-/* Additional breakpoint for smaller devices */
-@media (max-width: 480px) {
-    .ascii-art {
-        font-size: calc(0.55vw + 2px);  /* Responsive font size for phones */
-    }
-}
-
-/* Windows 95 window styles */
-.win95-window {
-    background-color: var(--win95-bg);
-    border: 2px solid var(--win95-dark);
-    box-shadow: inset 1px 1px var(--win95-white), inset -1px -1px var(--win95-darker);
-    padding: 2px;
-    margin: 20px auto;
-    max-width: 800px;  /* Back to original size */
-    width: 90%;
-    opacity: 0;
-    animation: bootWindow 0.5s ease forwards;
-    transition: transform 0.2s ease;
-}
-
-.window-title-bar {
-    background-color: var(--win95-blue);
-    color: var(--win95-white);
-    padding: 4px 8px;
-    font-weight: bold;
-    text-align: center;  /* Center all window titles */
-}
-
-.window-content {
-    padding: 20px 20px 80px 20px;  /* Top Right Bottom Left - extra padding at bottom */
-    background-color: var(--win95-bg);
-}
-
-/* Terminal-style text */
-.terminal-text {
-    text-align: left;
-    background-color: var(--win95-black);
-    color: var(--win95-white);
-    padding: 20px;
-    margin: 20px 0;
-    border: 2px solid var(--win95-dark);
-    font-family: 'Monocraft';
-    font-size: 1.2rem;
-    width: 100%;
-}
-
-.typing-text {
-    margin: 10px 0;
-    color: var(--win95-white);
-    font-size: 1.2rem;
-}
-
-/* Windows 95 button style */
+/* Buttons - Windows 95 Style */
 .win95-button {
     display: inline-block;
     background-color: var(--win95-bg);
@@ -466,8 +53,8 @@ h1, h2, .section-title {
     margin: 0 10px;
     color: var(--win95-black);
     text-decoration: none;
-    border-radius: 0;  /* Remove any rounding */
     font-size: 1.2rem;
+    border-radius: 0; /* Keep sharp edges */
 }
 
 .win95-button:hover {
@@ -480,493 +67,172 @@ h1, h2, .section-title {
     transform: translateY(1px);
 }
 
-/* Navigation button styles */
-.nav-link {
+/* Navbar */
+.navbar {
+    background-color: var(--win95-bg);
+    border-bottom: 2px solid var(--win95-dark);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    padding: 0.5rem;
+    min-height: 70px;
+}
+
+/* Navbar Links and Logo Styled Like Buttons */
+.nav-link, .navbar-brand {
     background-color: var(--win95-bg);
     border: 2px solid var(--win95-dark);
     box-shadow: inset 1px 1px var(--win95-white), inset -1px -1px var(--win95-darker);
-    padding: 6px 12px !important;
-    margin: 0 5px;
-    color: var(--win95-black) !important;
+    padding: 6px 12px;
+    margin: 5px;
+    color: var(--win95-black);
     font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 0;
+    display: inline-block;
 }
 
-.nav-link:hover {
-    background-color: var(--win95-white) !important;
-    color: var(--win95-black) !important;
+.nav-link:hover, .navbar-brand:hover {
+    background-color: var(--win95-white);
+    color: var(--win95-black);
 }
 
-/* Active page style */
-.nav-link.active {
-    background-color: var(--win95-blue) !important;
-    color: var(--win95-white) !important;
+/* Active Page Style */
+.nav-link.active, .navbar-brand.active {
+    background-color: var(--win95-blue);
+    color: var(--win95-white);
     border-color: var(--win95-darker);
     box-shadow: inset 1px 1px var(--win95-darker), inset -1px -1px var(--win95-white);
 }
 
-body {
-    background-color: #005555;
-    background-image: repeating-linear-gradient(45deg, 
-        rgba(255, 255, 255, 0.03) 0px, 
-        rgba(255, 255, 255, 0.03) 2px,
-        transparent 2px, 
-        transparent 4px
-    );
-}
-
-/* Page transition animation */
-.page-transition {
-    animation: fadeIn 0.5s ease-in;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Add this class to your main content sections */
+/* Windows 95 Window Styles */
 .win95-window {
-    animation: bootWindow 0.5s ease forwards;
-    opacity: 0;
-    animation-fill-mode: forwards;
-}
-
-@keyframes bootWindow {
-    from {
-        opacity: 0;
-        transform: scale(1.1) translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-    }
-}
-
-/* Window hover effect */
-.win95-window {
-    transition: transform 0.2s ease;
-}
-
-.win95-window:hover {
-    transform: translateY(-2px);
-}
-
-/* Custom cursor */
-body {
-    cursor: url('path-to-cursor.png'), auto;
-}
-
-.win95-window {
-    cursor: default;
-}
-
-a, button {
-    cursor: pointer;
-}
-
-/* Remove any previous transition/animation styles first */
-
-/* Add these new styles */
-.win95-window {
-    opacity: 0;  /* Start invisible */
-    animation: bootWindow 0.5s ease forwards;  /* Run animation once */
-}
-
-@keyframes bootWindow {
-    from {
-        opacity: 0;
-        transform: scale(1.1) translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-    }
-}
-
-/* Keep the hover effect separate */
-.win95-window {
-    transition: transform 0.2s ease;
-}
-
-.win95-window:hover {
-    transform: translateY(-2px);
-}
-
-/* 1. Slide and Fade (current one) */
-@keyframes fadeInWindow {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* 2. Scale Up */
-@keyframes scaleUp {
-    0% {
-        opacity: 0;
-        transform: scale(0.95);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-/* 3. Windows 95 Boot Style */
-@keyframes bootWindow {
-    0% {
-        opacity: 0;
-        transform: scale(1.1) translateY(-10px);
-    }
-    50% {
-        opacity: 0.5;
-        transform: scale(0.95) translateY(5px);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-    }
-}
-
-/* 4. Slide from Side */
-@keyframes slideFromSide {
-    0% {
-        opacity: 0;
-        transform: translateX(-30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* 5. Minimize Effect */
-@keyframes minimizeIn {
-    0% {
-        opacity: 0;
-        transform: scale(0.3) translateY(-100px);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-    }
-}
-
-/* ASCII Art styles */
-.ascii-art {
-    font-family: 'Monocraft', monospace;
-    font-size: 1rem;  /* Increased from 0.85rem */
-    line-height: 1.2;
-    white-space: pre;
-    color: var(--win95-white);
-    margin: 0;
-    display: block;
-}
-
-/* ASCII Art container */
-.terminal-text {
-    background-color: var(--win95-black);
-    padding: 10px;
-    border: 2px solid var(--win95-dark);
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-/* ASCII Art scaling */
-.ascii-art {
-    font-family: 'Monocraft', monospace;
-    font-size: calc(0.35vw + 2px);  /* Responsive font size */
-    line-height: 1.2;
-    white-space: pre;
-    color: var(--win95-white);
-    margin: 0;
-    transform-origin: center;
-    text-align: left;
-}
-
-/* Make container full width */
-.container {
-    max-width: 1800px !important;  /* Much wider */
-    width: 98% !important;         /* Almost full viewport width */
-}
-
-/* Make window take up maximum space */
-.win95-window {
-    width: 100%;
-    max-width: 1800px;  /* Match container width */
-    margin: 20px auto;
-}
-
-/* Keep terminal text full width */
-.terminal-text {
-    width: 100%;
-    padding: 30px;      /* Increased padding */
-}
-
-/* Make ASCII art bigger */
-.ascii-art {
-    font-size: 0.85rem;  /* Bigger font size */
-    line-height: 1.2;
-}
-
-/* Keep original window styles for other pages */
-.win95-window {
+    position: relative;
+    z-index: 1;
     background-color: var(--win95-bg);
     border: 2px solid var(--win95-dark);
     box-shadow: inset 1px 1px var(--win95-white), inset -1px -1px var(--win95-darker);
-    padding: 2px;
-    margin: 20px;
-    opacity: 0;
-    animation: bootWindow 0.5s ease forwards;
-    transition: transform 0.2s ease;
-}
-
-/* Add specific styles for the terminal window */
-.terminal-window {
-    max-width: 1800px;  /* Extra wide */
-    width: 98%;        /* Almost full width */
     margin: 20px auto;
-}
-
-/* Make ASCII art bigger */
-.terminal-window .ascii-art {
-    font-size: 0.85rem;
-}
-
-/* Base styles for all windows */
-.win95-window {
-    background-color: var(--win95-bg);
-    border: 2px solid var(--win95-dark);
-    box-shadow: inset 1px 1px var(--win95-white), inset -1px -1px var(--win95-darker);
-    padding: 2px;
-    margin: 20px auto;
-    max-width: 800px;  /* Default smaller size */
+    max-width: 800px;
     width: 90%;
-    opacity: 0;
     animation: bootWindow 0.5s ease forwards;
     transition: transform 0.2s ease;
 }
 
-/* Override for terminal window specifically */
-.win95-window.terminal-window {
-    width: fit-content !important;    /* Adjust to content */
-    max-width: 1800px !important;     /* Still keep a maximum */
-    margin: 20px auto;
+.win95-window:hover {
+    transform: translateY(-2px);
 }
 
-/* Container override for terminal window */
-.terminal-window .container {
-    max-width: 1800px !important;
-}
-
-/* Terminal text container */
-.terminal-text {
-    width: fit-content;    /* Adjust to content */
-    padding: 20px;
-    background-color: var(--win95-black);
-    border: 2px solid var(--win95-dark);
-}
-
-/* ASCII art sizing */
-.ascii-art {
-    font-family: 'Monocraft', monospace;
-    font-size: 0.85rem;
-    line-height: 1.2;
-    white-space: pre;
-    color: var(--win95-white);
-    margin: 0;
-    display: block;
-}
-
-/* ASCII art color blocks */
-.color-block { color: #000000; }
-.color-block-red { color: #cc0000; }
-.color-block-green { color: #4e9a06; }
-.color-block-yellow { color: #c4a000; }
-.color-block-blue { color: #3465a4; }
-.color-block-magenta { color: #75507b; }
-.color-block-cyan { color: #06989a; }
-.color-block-white { color: #d3d7cf; }
-
-.color-block-bright { color: #555753; }
-.color-block-bright-red { color: #ef2929; }
-.color-block-bright-green { color: #8ae234; }
-.color-block-bright-yellow { color: #fce94f; }
-.color-block-bright-blue { color: #729fcf; }
-.color-block-bright-magenta { color: #ad7fa8; }
-.color-block-bright-cyan { color: #34e2e2; }
-.color-block-bright-white { color: #eeeeec; }
-
-/* Terminal title bar */
-.terminal-title-bar {
+.window-title-bar {
     background-color: var(--win95-blue);
     color: var(--win95-white);
     padding: 4px 8px;
     font-weight: bold;
-    font-size: 1rem;
+    text-align: center;
     border-bottom: 2px solid var(--win95-dark);
-    margin: -20px -20px 20px -20px;  /* Negative margin to align with padding */
 }
 
-/* Terminal container */
-.terminal-container {
-    background-color: var(--win95-bg);
-    border: 2px solid var(--win95-dark);
-    box-shadow: inset 1px 1px var(--win95-white), inset -1px -1px var(--win95-darker);
-    padding: 2px;
-    width: fit-content;
-    margin: 20px auto;
-}
-
-/* Keep your existing terminal-text styles */
-.terminal-text {
-    background-color: var(--win95-black);
-    padding: 20px;
-    border: 2px solid var(--win95-dark);
-}
-
-/* Terminal label coloring */
-.terminal-label {
-    color: #36a46a;  /* Bright green */
-    /* Or try these colors:
-    color: #729fcf;  // Light blue
-    color: #ad7fa8;  // Light purple
-    color: #fce94f;  // Light yellow
-    */
-}
-
-/* Main content wrapper */
-main {
-    flex: 1;
-    width: 100%;
-    padding-bottom: 100px;  /* Increased padding before footer */
-}
-
-/* Footer styles */
-.footer {
-    width: 100%;
-    background-color: var(--win95-bg);
-    border-top: 2px solid var(--win95-dark);
-    color: var(--win95-black);
-    padding: 10px 0;
-    margin-top: auto;  /* Keep this to push footer to bottom */
-}
-
-/* Terminal window container */
-.terminal-window {
-    margin-bottom: 40px;  /* Space before footer */
-}
-
-/* Container adjustments */
-.container {
-    width: 95% !important;
-    max-width: 1800px !important;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-/* If you want to keep some specific titles left-aligned, add this class to those windows */
-.window-title-bar.left-aligned {
-    text-align: left;
-}
-
-/* About content styling */
-.about-content {
-    text-align: center;  /* Center all text */
-    padding: 20px;
-}
-
-.about-content h3 {
-    color: var(--win95-blue);
-    margin-top: 25px;
-    margin-bottom: 15px;
-    font-size: 1.4rem;
-}
-
-.about-content ul {
-    list-style: none;  /* Remove default list styling */
-    padding: 0;        /* Remove default padding */
-    margin: 0;         /* Remove default margin */
-}
-
-.about-content li {
-    margin-bottom: 8px;
-}
-
-.about-content p {
-    margin-bottom: 20px;
-    line-height: 1.6;
-    max-width: 800px;  /* Optional: limit line length for better readability */
-    margin-left: auto; /* Center the paragraph block */
-    margin-right: auto;
-}
-
-/* About section container */
-.about-section {
-    padding: 80px 0 120px 0;  /* Add more padding at bottom */
-}
-
-/* Window sizing */
-.win95-window {
-    background-color: var(--win95-bg);
-    border: 2px solid var(--win95-dark);
-    box-shadow: inset 1px 1px var(--win95-white), inset -1px -1px var(--win95-darker);
-    padding: 2px;
-    margin: 20px auto;
-    width: 90%;
-    max-width: 800px;
-    height: auto;      /* Let it size to content */
-}
-
-/* Window content */
 .window-content {
     padding: 20px;
     background-color: var(--win95-bg);
-    height: auto;      /* Let it size to content */
-    margin-bottom: 0;  /* Remove extra space at bottom */
 }
 
-/* About content */
-.about-content {
-    text-align: center;
-    padding: 20px;
-    padding-bottom: 40px;  /* Add space inside the window */
-}
-
-.skill-item .d-flex h5 {
+/* Footer */
+.footer {
+    width: 100%;
+    padding: 1rem 0;
+    margin-top: auto;
+    background-color: var(--win95-bg);
+    border-top: 2px solid var(--win95-dark);
     color: var(--win95-black);
 }
 
-/* Global layout fixes */
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    padding-top: 60px; /* Adjust based on your navbar height */
+/* Animations */
+@keyframes bootWindow {
+    0% {
+        opacity: 0;
+        transform: scale(1.1) translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
 }
 
+
+
+@media (max-width: 768px) {
+    .win95-window {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        min-height: auto;
+    }
+
+    main {
+        margin-top: 80px;
+    }
+
+    .navbar-collapse {
+        background-color: var(--win95-bg);
+        margin-top: 0.5rem;
+        border: 2px solid var(--win95-dark);
+        box-shadow: inset 1px 1px var(--win95-white), inset -1px -1px var(--win95-darker);
+    }
+
+    .nav-link {
+        margin: 5px;
+    }
+}
+
+.win95-box {
+    border: 2px solid var(--win95-dark);
+    box-shadow: inset 1px 1px var(--win95-white), inset -1px -1px var(--win95-darker);
+    padding: 15px;
+    margin-bottom: 20px;  /* Add more space between boxes */
+    background-color: var(--win95-bg);
+}
+
+/* Optional: add a stronger border or different background to distinguish blocks */
+.skills-section .win95-box {
+    border-width: 3px;  /* Make borders more prominent */
+}
+
+/* Main content positioning */
 main {
-    flex: 1;
+    margin-top: 70px;
+    position: relative;
     width: 100%;
-    padding-bottom: 60px; /* Space for footer */
+    display: block;
 }
 
-/* Section spacing */
-.skills-section,
-.projects-section,
-.contact-section,
+/* Hero section adjustment */
 .hero {
-    min-height: calc(100vh - 120px);
-    padding: 20px 0 80px 0;
+    padding-top: 70px;  /* Add padding to hero section */
+    width: 100%;
+}
+
+.terminal-window {
+    margin: 20px auto;
+    display: inline-block;
+    width: fit-content;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.terminal-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 480px) {
+    .terminal-window {
+        width: 100%;
+    }
 }
