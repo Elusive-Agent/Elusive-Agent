@@ -262,3 +262,24 @@ main {
     transform: scale(1.02);
     opacity: 0.95;
 }
+
+
+
+/* Target only the list items within the interests section */
+.interests-list {
+    padding-left: 0; /* Remove default padding */
+    list-style-type: none; /* Remove bullet points */
+}
+
+.interests-list li {
+    border-bottom: 2px solid #444; /* Thicker and darker line */
+    padding: 10px 0; /* Add some vertical padding */
+}
+
+.interests-list li:last-child {
+    border-bottom: none; /* Remove the line after the last item */
+}
+
+.progress-bar {
+    background-color: #3d5a80; /* Change this to your desired color */
+}
